@@ -18,7 +18,7 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": 9,
+  "id": 18,
   "links": [],
   "panels": [
     {
@@ -215,7 +215,7 @@
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
-            "lastNotNull"
+            "max"
           ],
           "fields": "",
           "values": false
@@ -225,7 +225,7 @@
         "textMode": "auto",
         "wideLayout": true
       },
-      "pluginVersion": "10.4.0",
+      "pluginVersion": "10.4.1",
       "targets": [
         {
           "datasource": {
@@ -233,8 +233,8 @@
             "uid": "P1E53E98DCFC0B173"
           },
           "disableTextWrap": false,
-          "editorMode": "builder",
-          "expr": "sum by(taskqueue) (count_over_time(workflow_success{taskqueue=\"communication_workflow\"}[24h]))",
+          "editorMode": "code",
+          "expr": "sum by(taskqueue) (workflow_success{taskqueue=\"communication_workflow\"})",
           "fullMetaSearch": false,
           "includeNullMetadata": true,
           "instant": false,
@@ -262,6 +262,6 @@
   "timezone": "browser",
   "title": "Custom Dashboard",
   "uid": "edif6eeykmrcwd",
-  "version": 6,
+  "version": 7,
   "weekStart": ""
 }
